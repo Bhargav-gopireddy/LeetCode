@@ -42,14 +42,16 @@ class Solution {
             int next = (mid + 1)%n;
             if(arr[mid] <= arr[prev] && arr[mid] <= arr[next]){
                 return mid;
-            }
-
-            if(arr[mid] <= arr[high] ){
+            }else{
+                if(arr[mid] <= arr[high] ){
                 high= mid-1;
             }
             else if(arr[low] <= arr[mid]){
                 low= mid+1;
             }
+            }
+
+            
         }
         return -1;
         
